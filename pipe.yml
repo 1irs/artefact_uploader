@@ -1,0 +1,21 @@
+name: 1IRS Test Reports Uploader
+image: obrizan/artefact_uploader:1.5
+category: Testing
+description: "Uploads and analyzes test metrics: number of tests, test coverage, etc"
+variables:
+  - name: ARTEFACT_UPLOADER_API_KEY
+    default: '${ARTEFACT_UPLOADER_API_KEY}'
+  - name: TEST_REPORT_LOCATION
+repository: https://bitbucket.org/1irs/artefact_uploader
+maintainer:
+  name: First Institute of Reliable Software
+  website: https://1irs.net/
+  email: info@1irs.net
+vendor:
+  name: First Institute of Reliable Software
+  website: https://1irs.net/
+  email: info@1irs.net
+tags:
+  - test
+  - coverage
+  - analysis
