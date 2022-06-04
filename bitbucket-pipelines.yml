@@ -9,7 +9,7 @@ pipelines:
           # Build an push image
           - VERSION="1.$BITBUCKET_BUILD_NUMBER"
           - IMAGE="$DOCKERHUB_USERNAME/$BITBUCKET_REPO_SLUG"
-          - docker login --username "$DOCKERHUB_USERNAME" --password-stdin < ${DOCKERHUB_PASSWORD}
+          - docker login --username "$DOCKERHUB_USERNAME" --password-stdin < echo ${DOCKERHUB_PASSWORD}
           - docker image build -t ${IMAGE}:${VERSION} .
           - docker image tag ${IMAGE}:${VERSION} ${IMAGE}:latest
           - docker image push ${IMAGE}
